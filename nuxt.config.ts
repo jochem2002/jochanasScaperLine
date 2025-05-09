@@ -2,7 +2,11 @@ export default defineNuxtConfig({
   css: [
     'https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap'
   ],
-  modules: ['@nuxthq/ui', '@vite-pwa/nuxt'],
+  modules: [
+    '@nuxthq/ui',
+    '@vite-pwa/nuxt',
+    '@nuxtjs/tailwindcss'
+  ],
   ui: {
     icons: 'lucide'
   },
