@@ -1,29 +1,47 @@
-export type FeedingDay = {
-  day: number;
-  food: string;
-  dosage: string;
-  target: string;
-  notes: string;
-};
+export const regularSchema = [
+  { day: 1, food: "DR. BASSLEER BIOFISH FOOD Regular", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Startdag basisvoeding" },
+  { day: 2, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Immuunondersteuning" },
+  { day: 3, food: "DR. BASSLEER BIOFISH FOOD Chlorella", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Spijsvertering & celgezondheid" },
+  { day: 4, food: "DR. BASSLEER BIOFISH FOOD Better Tabs", dosage: "2 tabs", target: "Otocinclus", notes: "Voor algeneters" },
+  { day: 5, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Acai", dosage: "2 sticks", target: "Amano + Cherry", notes: "Voor garnalen" },
+  { day: 6, food: "DR. BASSLEER BIOFISH FOOD Matrine", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Anti-stress" },
+  { day: 7, food: "Rustdag", dosage: "-", target: "-", notes: "Geen voer" },
+  { day: 8, food: "DR. BASSLEER BIOFISH FOOD Forte", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Immuunboost" },
+  { day: 9, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Chlorella", dosage: "2 sticks", target: "Amano + Cherry", notes: "Garnalen + vezels" },
+  { day: 10, food: "DR. BASSLEER BIOFISH FOOD Regular", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Herhaling basisvoeding" },
+  { day: 11, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Afwisseling" },
+  { day: 12, food: "DR. BASSLEER BIOFISH FOOD Better Tabs", dosage: "2 tabs", target: "Otocinclus", notes: "Herhaling tabs" },
+  { day: 13, food: "DR. BASSLEER BIOFISH FOOD Herbal", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Kruidenmix" },
+  { day: 14, food: "Rustdag", dosage: "-", target: "-", notes: "Geen voer" },
+  { day: 15, food: "DR. BASSLEER BIOFISH FOOD Acai", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Kleurversterking" },
+  { day: 16, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Acai", dosage: "2 sticks", target: "Amano + Cherry", notes: "Energierijk voor garnalen" },
+  { day: 17, food: "DR. BASSLEER BIOFISH FOOD Regular", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Basisvoeding" },
+  { day: 18, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Extra boost" },
+  { day: 19, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Chlorella", dosage: "2 sticks", target: "Amano + Cherry", notes: "Rustige dag" },
+  { day: 20, food: "DR. BASSLEER BIOFISH FOOD Matrine", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Laatste anti-stress" },
+  { day: 21, food: "DR. BASSLEER BIOFISH FOOD Acai", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Einde regulier schema" }
+]
 
-export type FeedingSchema = FeedingDay[];
-
-export const recoverySchema: FeedingSchema = [
-  { day: 1, food: 'Matrine', dosage: '20 mg', target: 'Alle vissen', notes: 'Start antibacteriële ondersteuning' },
-  { day: 2, food: 'Shrimp Sticks Chlorella', dosage: '1 stick', target: 'Amano + Cherry garnalen', notes: 'Plantaardig, ondersteunt darmflora' },
-  { day: 3, food: 'Garlic', dosage: '20 mg', target: 'Alle vissen', notes: 'Stimuleert eetlust, mild antibacterieel' },
-  { day: 4, food: 'Herbal + Chlorella', dosage: '30 mg + 30 mg', target: 'Alle vissen', notes: 'Darmgezondheid en immuunboost' },
-  { day: 5, food: 'Rustdag', dosage: '—', target: '—', notes: 'Geen voer: rust voor het systeem' },
-  { day: 6, food: 'Better Tabs', dosage: '1 tab', target: 'Otocinclus + Amano', notes: 'Laag belastend, voor bodemeters' },
-  { day: 7, food: 'Forte', dosage: '20 mg', target: 'Alle vissen', notes: 'Versterkt weerstand' }
-];
-
-export const regularSchema: FeedingSchema = [
-  { day: 1, food: 'Acai', dosage: '20 mg', target: 'Vissen', notes: 'Energie en kleurversterking' },
-  { day: 2, food: 'Shrimp Sticks Chlorella + Better Tabs', dosage: '1 stick + 1 tab', target: 'Garnalen + Otocinclus', notes: 'Vezelrijk, geschikt voor bodemeters' },
-  { day: 3, food: 'Garlic', dosage: '20 mg', target: 'Vissen', notes: 'Stimuleert voeropname' },
-  { day: 4, food: 'Herbal + Chlorella', dosage: '30 mg + 30 mg', target: 'Vissen', notes: 'Ondersteunt darm en afweer' },
-  { day: 5, food: 'Regular', dosage: '20 mg', target: 'Vissen', notes: 'Licht verteerbare basisdag' },
-  { day: 6, food: 'Shrimp Sticks Acai', dosage: '1 stick', target: 'Bodemeters + garnalen', notes: 'Energieboost voor reinigers' },
-  { day: 7, food: 'Rustdag', dosage: '—', target: '—', notes: 'Essentiële pauze' }
-];
+export const recoverySchema = [
+  { day: 1, food: "DR. BASSLEER BIOFISH FOOD Herbal + Chlorella", dosage: "Herbal 20 mg / Chlorella 10 mg", target: "CPD + Endler + Tateurndina", notes: "Start herstelkuur" },
+  { day: 2, food: "DR. BASSLEER BIOFISH FOOD Matrine", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Antibacterieel" },
+  { day: 3, food: "DR. BASSLEER BIOFISH FOOD Better Tabs", dosage: "2 tabs", target: "Otocinclus", notes: "Rustige voeding" },
+  { day: 4, food: "Rustdag", dosage: "-", target: "-", notes: "Licht herstel" },
+  { day: 5, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Immuunboost" },
+  { day: 6, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Chlorella", dosage: "2 sticks", target: "Amano + Cherry", notes: "Garnalen ondersteuning" },
+  { day: 7, food: "DR. BASSLEER BIOFISH FOOD Herbal + Chlorella", dosage: "Herbal 15 mg / Chlorella 15 mg", target: "CPD + Endler + Tateurndina", notes: "Krachtig herstel" },
+  { day: 8, food: "DR. BASSLEER BIOFISH FOOD Forte", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Weerstand opbouwen" },
+  { day: 9, food: "DR. BASSLEER BIOFISH FOOD Better Tabs", dosage: "2 tabs", target: "Otocinclus", notes: "Herhaling" },
+  { day: 10, food: "Rustdag", dosage: "-", target: "-", notes: "Geen belasting" },
+  { day: 11, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Extra weerstand" },
+  { day: 12, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Acai", dosage: "2 sticks", target: "Amano + Cherry", notes: "Herstel garnalen" },
+  { day: 13, food: "DR. BASSLEER BIOFISH FOOD Herbal + Chlorella", dosage: "Herbal 10 mg / Chlorella 20 mg", target: "CPD + Endler + Tateurndina", notes: "Lichte dag" },
+  { day: 14, food: "Rustdag", dosage: "-", target: "-", notes: "Observatie" },
+  { day: 15, food: "DR. BASSLEER BIOFISH FOOD Forte", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Krachtige voeding" },
+  { day: 16, food: "DR. BASSLEER BIOFISH FOOD Garlic", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Afsluiten kuur" },
+  { day: 17, food: "DR. BASSLEER BIOFISH FOOD Shrimp Sticks Chlorella", dosage: "2 sticks", target: "Amano + Cherry", notes: "Laatste garnalenboost" },
+  { day: 18, food: "DR. BASSLEER BIOFISH FOOD Better Tabs", dosage: "2 tabs", target: "Otocinclus", notes: "Rustdag met tabs" },
+  { day: 19, food: "Rustdag", dosage: "-", target: "-", notes: "Geen voer" },
+  { day: 20, food: "DR. BASSLEER BIOFISH FOOD Herbal + Chlorella", dosage: "Herbal 15 mg / Chlorella 15 mg", target: "CPD + Endler + Tateurndina", notes: "Laatste herstel" },
+  { day: 21, food: "DR. BASSLEER BIOFISH FOOD Forte", dosage: "30 mg", target: "CPD + Endler + Tateurndina", notes: "Einde herstelkuur" }
+]

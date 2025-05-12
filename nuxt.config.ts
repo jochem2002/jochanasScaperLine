@@ -1,20 +1,24 @@
 export default defineNuxtConfig({
   css: [],
+
   modules: [
     '@nuxthq/ui',
     '@vite-pwa/nuxt',
     '@nuxtjs/tailwindcss',
     '@nuxtjs/google-fonts'
   ],
+
   googleFonts: {
     families: {
       Outfit: [400, 600, 700]
     },
     display: 'swap'
   },
+
   ui: {
     icons: 'lucide'
   },
+
   pwa: {
     registerType: 'autoUpdate',
     manifest: {
@@ -38,10 +42,13 @@ export default defineNuxtConfig({
       ]
     }
   },
+
   app: {
     head: {
       title: 'Aquarium Feeding Schedule',
       meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1' }]
     }
-  }
+  },
+
+  compatibilityDate: '2025-05-12'
 })

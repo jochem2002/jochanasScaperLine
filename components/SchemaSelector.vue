@@ -1,22 +1,32 @@
 <template>
-  <UFormGroup label="Voedingsschema" name="schema">
-    <div class="flex items-center gap-2">
-      <UIcon name="lucide:list" class="text-gray-500" />
-      <USelect
-        v-model="modelValue"
-        :options="options"
-        placeholder="Kies een schema"
-        class="flex-1"
-      />
-    </div>
-  </UFormGroup>
+  <div class="flex gap-3 items-center">
+    <label for="schema" class="font-medium">Kies schema</label>
+    <select
+        id="schema"
+        v-model="model"
+        @change="$emit('update:selectedId', model)"
+        class="border rounded px-3 py-2"
+    >
+      <option
+        v-for="s in schemas"
+        :key="s.id"
+        :value="s.id"
+      >
+        {{ s.name }}
+      </option>
+    </select>
+  </div>
 </template>
 
 <script setup lang="ts">
-const modelValue = defineModel<string>()
+const props = defineProps<{
+  schemas: { id: string, name: string }[]
+  selectedId: string
+}>()
 
-const options = [
-  'Herstelkuur bij Aeromonas/Pseudomonas',
-  'Regulier Voedingsschema'
-]
+const model = ref(props.selectedId)
+
+watch(() => props.selectedId, (val) => {
+  model.value = val
+})
 </script>
