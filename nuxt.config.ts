@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+  server: {
+    port: 3030
+  },
+
   css: [],
 
   modules: [
